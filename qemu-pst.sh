@@ -28,6 +28,6 @@ qemu-system-x86_64 \
     -device ide-hd,bus=sata.4,drive=SystemDisk \
     -vga none \
     -device pcie-root-port,bus=pcie.0,multifunction=on,port=1,chassis=1,id=port.1 \
-    -device vfio-pci,host=03:00.0,bus=port.1,multifunction=on \
+    -device vfio-pci,host=03:00.0,bus=port.1,multifunction=on,romfile=firmware/Lexa.rom \
     -device vfio-pci,host=03:00.1,bus=port.1 \
     -usb -device usb-kbd -device usb-mouse \
