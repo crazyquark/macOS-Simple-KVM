@@ -27,7 +27,7 @@ qemu-system-x86_64 \
     -drive id=SystemDisk,if=none,file=MyDisk.qcow2 \
     -device ide-hd,bus=sata.4,drive=SystemDisk \
     -usb -device usb-kbd -device usb-mouse \
-    -vga qxl \
-    # -device pcie-root-port,bus=pcie.0,multifunction=on,port=1,chassis=1,id=port.1 \
-    # -device vfio-pci,host=03:00.0,bus=port.1,multifunction=on \
-    # -device vfio-pci,host=03:00.1,bus=port.1 \
+    -vga none \
+    -device pcie-root-port,bus=pcie.0,multifunction=on,port=1,chassis=1,id=port.1 \
+    -device vfio-pci,host=03:00.0,bus=port.1,multifunction=on \
+    -device vfio-pci,host=03:00.1,bus=port.1 \
