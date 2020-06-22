@@ -17,7 +17,7 @@ qemu-system-x86_64 \
     -drive if=pflash,format=raw,readonly,file="$OVMF/OVMF_CODE.fd" \
     -drive if=pflash,format=raw,file="$OVMF/OVMF_VARS-1024x768.fd" \
     -device ich9-intel-hda -device hda-output \
-    -netdev user,id=net0 \
+    -netdev user,id=net0,hostfwd=tcp::5555-:5900 \
     -device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
     -device ich9-ahci,id=sata \
     -drive id=ESP,if=none,format=qcow2,file=ESP.qcow2 \
