@@ -19,7 +19,7 @@ qemu-system-x86_64 \
     -vga qxl \
     -device ich9-intel-hda -device hda-output \
     -usb -device usb-kbd -device usb-mouse \
-    -netdev user,id=net0 \
+    -netdev user,id=net0,hostfwd=tcp::5555-:5900,hostfwd=tcp::2222-:22 \
     -device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
     -device ich9-ahci,id=sata \
     -drive id=ESP,if=none,format=qcow2,file=ESP.qcow2 \
