@@ -31,7 +31,8 @@ qemu-system-x86_64 \
     -device pcie-root-port,bus=pcie.0,multifunction=on,port=1,chassis=1,id=port.1 \
     -device vfio-pci,host=03:00.0,bus=port.1,multifunction=on \
     -device vfio-pci,host=03:00.1,bus=port.1 \
-    -device usb-host,vendorid=0x05ac,productid=0x12a8
+    -device vfio-pci,host=05:00.0,bus=pcie.0 \
+    # -device usb-host,vendorid=0x05ac,productid=0x12a8
     # -usb -device usb-host,hostbus=1,hostaddr=18
 # iPhone:
 # Bus 001 Device 018: ID 05ac:12a8
